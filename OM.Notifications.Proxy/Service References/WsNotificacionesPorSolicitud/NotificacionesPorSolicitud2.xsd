@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EnqueueMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCategoria" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="monto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroConfirmacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="producto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MSMQMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCategoria" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="monto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MensajesAdicionales" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSNotificaciones" Namespace="http://schemas.datacontract.org/2004/07/SkCo.Notificaciones.DSL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSNotificaciones.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePreferenciasPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacion" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoidCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="mail" type="xs:boolean" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePreferenciasPortalResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePreferenciasPipeline">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacion" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoidCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="mail" type="xs:boolean" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NoSeleccionoRecibirViaSms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="NoSeleccionoRecibirViaEmail" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePreferenciasPipelineResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnqueueMessageMAIL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCategoria" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="monto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroConfirmacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MesaggeQueues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlDoc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numIdCliente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Notificacion_SMS_CreacionCuentas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="C_E_comunicacion_Automatica_insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Campana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo_Doc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="campo1_text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="C_E_comunicacion_Automatica_insertResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreferenciasEditor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PERS_IdNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PERS_IdType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdMensaje" type="xs:int" />
+        <xs:element minOccurs="0" name="UsuarioCrea" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioModifica" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Sms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Email" type="xs:boolean" />
+        <xs:element minOccurs="0" name="categoria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pais" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strRespuesta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Movil" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreferenciasEditorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PreferenciasEditorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreferenciasEditorEditar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PERS_IdNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Sms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Email" type="xs:boolean" />
+        <xs:element minOccurs="0" name="categoria" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreferenciasEditorEditarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PreferenciasEditorEditarResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMensajes_PreferenciasTransaccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo_Documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pais" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMensajes_PreferenciasTransaccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConsultarMensajes_PreferenciasTransaccionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSEDITOR" Namespace="http://schemas.datacontract.org/2004/07/SkCo.Notificaciones.DSL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSEDITOR.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPreferencias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pais" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPreferenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConsultarPreferenciasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarPreferenciasTyCMx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pais" type="xs:int" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfcCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="movil" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoTerminos" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarPreferenciasTyCMxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarPreferenciasTyCMxResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearPreferenciasTyCMx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pais" type="xs:int" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfcCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="movil" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoTerminos" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearPreferenciasTyCMxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearPreferenciasTyCMxResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NotificarTyCMx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pais" type="xs:int" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfcCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="movil" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoOperacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NotificarTyCMxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NotificarTyCMxResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MSMQMessage_Mexico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Operacion" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numIdCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="monto" type="xs:decimal" />
+        <xs:element minOccurs="0" name="mobilCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mobilFP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailFP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MensajesAdicionales" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSNotificaciones" Namespace="http://schemas.datacontract.org/2004/07/SkCo.Notificaciones.DSL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSNotificaciones.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MSMQMessage_MexicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MSMQMessage_MexicoResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detallError" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnqueueEmail_Mexico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTabla" type="xs:int" />
+        <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnqueueEmail_MexicoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

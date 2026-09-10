@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DSNotificaciones.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DSNotificaciones.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DSNotificaciones.xsd" id="DSNotificaciones" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DSNotificaciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Preferencias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IdPreferencia" type="xs:int" />
+              <xs:element name="IdPlantilla" type="xs:int" />
+              <xs:element minOccurs="0" name="TipoIdCliente" type="xs:string" />
+              <xs:element name="IdCliente" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Contrato">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ParametrosMensaje">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="Id" type="xs:int" />
+              <xs:element minOccurs="0" name="NombreParametro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ValorParametro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Categorias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IdCategoria" type="xs:int" />
+              <xs:element name="IdenCorto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdCategoriaPadre" type="xs:int" />
+              <xs:element name="IdProducto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Visible" type="xs:boolean" />
+              <xs:element name="EstCat_IdEstado" type="xs:int" />
+              <xs:element name="Pais_IdPais" type="xs:int" />
+              <xs:element minOccurs="0" name="UsuarioCrea">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FechaCrea" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="UsuarioModifica">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FechaModifica" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReglasEnvio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" type="xs:int" />
+              <xs:element name="Operacion" type="xs:int" />
+              <xs:element name="Parametro" type="xs:string" />
+              <xs:element name="Operador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Valor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EnvioMasivoMensajes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TipoIdCliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdCliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdMensaje" type="xs:int" />
+              <xs:element name="CuerpoMensaje">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contacto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contrato">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Valor" type="xs:decimal" />
+              <xs:element name="FechaProceso" type="xs:dateTime" />
+              <xs:element name="EstadoEnvio" type="xs:boolean" />
+              <xs:element minOccurs="0" name="FechaEnvio" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AuditChangeLog">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AuditChangeLogId" type="xs:int" />
+              <xs:element minOccurs="0" name="Operation" type="xs:string" />
+              <xs:element minOccurs="0" name="TableName" type="xs:string" />
+              <xs:element minOccurs="0" name="RecordId" type="xs:long" />
+              <xs:element minOccurs="0" name="ColumnName" type="xs:string" />
+              <xs:element minOccurs="0" name="PreviousValue" type="xs:string" />
+              <xs:element minOccurs="0" name="NewValue" type="xs:string" />
+              <xs:element minOccurs="0" name="ChangeDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ChangedBy" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Editor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SMS" type="xs:boolean" />
+              <xs:element minOccurs="0" name="MAIL" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Mensajes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdMensaje" type="xs:int" />
+              <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="Descripcion" type="xs:string" />
+              <xs:element minOccurs="0" name="Cat_IdCategoria" type="xs:string" />
+              <xs:element minOccurs="0" name="TpMe_IdTipoMensaje" type="xs:string" />
+              <xs:element minOccurs="0" name="CuerpoMensaje" type="xs:string" />
+              <xs:element minOccurs="0" name="CopiaFP" type="xs:boolean" />
+              <xs:element minOccurs="0" name="EstMsn_IdEstadoMensaje" type="xs:int" />
+              <xs:element minOccurs="0" name="IdMensajeFP" type="xs:int" />
+              <xs:element minOccurs="0" name="ContratoVisible" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ValorVisible" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Cat_IdSubCategoria" type="xs:int" />
+              <xs:element minOccurs="0" name="Cat_IdOperacion" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EnvioMasivoMensajesAdicionales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Name" type="xs:string" />
+              <xs:element minOccurs="0" name="Value" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Preferencias" />
+      <xs:field xpath="mstns:IdPreferencia" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ParametrosMensaje_Constraint1">
+      <xs:selector xpath=".//mstns:ParametrosMensaje" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Categorias_Constraint1">
+      <xs:selector xpath=".//mstns:Categorias" />
+      <xs:field xpath="mstns:IdCategoria" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ReglasEnvio_Constraint1">
+      <xs:selector xpath=".//mstns:ReglasEnvio" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="AuditChangeLogKey1">
+      <xs:selector xpath=".//mstns:AuditChangeLog" />
+      <xs:field xpath="mstns:AuditChangeLogId" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="Mensajes_Constraint1">
+      <xs:selector xpath=".//mstns:Mensajes" />
+      <xs:field xpath="mstns:IdMensaje" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="942d3510-a9dd-4c22-9de0-b29b2d303842" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ArrayList" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/OM.Notifications/service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="e68c3c3b-0b1e-4413-bdc7-ba094838f407" SourceId="1" SourceUrl="http://localhost/OM.Notifications/service?xsd=xsd1" />
+    <MetadataFile FileName="NotificationsService1.wsdl" MetadataType="Wsdl" ID="45af4057-427c-4045-94f7-8813ee724e86" SourceId="1" SourceUrl="http://localhost/OM.Notifications/service?wsdl" />
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="ad59d85f-b473-47cb-a5b7-6fa965347d52" SourceId="1" SourceUrl="http://localhost/OM.Notifications/service?disco" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0e01cb6f-fc36-414e-aec1-49cbf99377f5" SourceId="1" SourceUrl="http://localhost/OM.Notifications/service?xsd=xsd2" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="cb4ee72e-20c9-4fe4-bef4-4fc53bfd4de8" SourceId="1" SourceUrl="http://localhost/OM.Notifications/service?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

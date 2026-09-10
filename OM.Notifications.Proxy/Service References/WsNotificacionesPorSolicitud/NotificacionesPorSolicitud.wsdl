@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NotificacionesPorSolicitud" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd2" namespace="http://tempuri.org/DSNotificaciones.xsd" />
+      <xsd:import schemaLocation="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd4" namespace="http://tempuri.org/DSEDITOR.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INotificacionesPorSolicitud_EnqueueMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnqueueMessage" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_MSMQMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:MSMQMessage" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_UpdatePreferenciasPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePreferenciasPortal" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_UpdatePreferenciasPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePreferenciasPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_UpdatePreferenciasPipeline_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePreferenciasPipeline" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_UpdatePreferenciasPipeline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePreferenciasPipelineResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_EnqueueMessageMAIL_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnqueueMessageMAIL" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_MesaggeQueues_InputMessage">
+    <wsdl:part name="parameters" element="tns:MesaggeQueues" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_Notificacion_SMS_CreacionCuentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Notificacion_SMS_CreacionCuentas" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_C_E_comunicacion_Automatica_insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:C_E_comunicacion_Automatica_insert" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_C_E_comunicacion_Automatica_insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:C_E_comunicacion_Automatica_insertResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_PreferenciasEditor_InputMessage">
+    <wsdl:part name="parameters" element="tns:PreferenciasEditor" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_PreferenciasEditor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PreferenciasEditorResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_PreferenciasEditorEditar_InputMessage">
+    <wsdl:part name="parameters" element="tns:PreferenciasEditorEditar" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_PreferenciasEditorEditar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PreferenciasEditorEditarResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_ConsultarMensajes_PreferenciasTransaccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMensajes_PreferenciasTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_ConsultarMensajes_PreferenciasTransaccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMensajes_PreferenciasTransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_ConsultarPreferencias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPreferencias" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_ConsultarPreferencias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPreferenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_VerificarPreferenciasTyCMx_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarPreferenciasTyCMx" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_VerificarPreferenciasTyCMx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarPreferenciasTyCMxResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_CrearPreferenciasTyCMx_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPreferenciasTyCMx" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_CrearPreferenciasTyCMx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPreferenciasTyCMxResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_NotificarTyCMx_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotificarTyCMx" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_NotificarTyCMx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotificarTyCMxResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_MSMQMessage_Mexico_InputMessage">
+    <wsdl:part name="parameters" element="tns:MSMQMessage_Mexico" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_MSMQMessage_Mexico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MSMQMessage_MexicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_EnqueueEmail_Mexico_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnqueueEmail_Mexico" />
+  </wsdl:message>
+  <wsdl:message name="INotificacionesPorSolicitud_EnqueueEmail_Mexico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnqueueEmail_MexicoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INotificacionesPorSolicitud">
+    <wsdl:operation name="EnqueueMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/EnqueueMessage" message="tns:INotificacionesPorSolicitud_EnqueueMessage_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MSMQMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/MSMQMessage" message="tns:INotificacionesPorSolicitud_MSMQMessage_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePreferenciasPortal">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/UpdatePreferenciasPortal" message="tns:INotificacionesPorSolicitud_UpdatePreferenciasPortal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/UpdatePreferenciasPortalResponse" message="tns:INotificacionesPorSolicitud_UpdatePreferenciasPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePreferenciasPipeline">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/UpdatePreferenciasPipeline" message="tns:INotificacionesPorSolicitud_UpdatePreferenciasPipeline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/UpdatePreferenciasPipelineResponse" message="tns:INotificacionesPorSolicitud_UpdatePreferenciasPipeline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnqueueMessageMAIL">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/EnqueueMessageMAIL" message="tns:INotificacionesPorSolicitud_EnqueueMessageMAIL_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MesaggeQueues">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/MesaggeQueues" message="tns:INotificacionesPorSolicitud_MesaggeQueues_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Notificacion_SMS_CreacionCuentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/Notificacion_SMS_CreacionCuentas" message="tns:INotificacionesPorSolicitud_Notificacion_SMS_CreacionCuentas_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="C_E_comunicacion_Automatica_insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/C_E_comunicacion_Automatica_insert" message="tns:INotificacionesPorSolicitud_C_E_comunicacion_Automatica_insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/C_E_comunicacion_Automatica_insertResponse" message="tns:INotificacionesPorSolicitud_C_E_comunicacion_Automatica_insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PreferenciasEditor">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/PreferenciasEditor" message="tns:INotificacionesPorSolicitud_PreferenciasEditor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/PreferenciasEditorResponse" message="tns:INotificacionesPorSolicitud_PreferenciasEditor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PreferenciasEditorEditar">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/PreferenciasEditorEditar" message="tns:INotificacionesPorSolicitud_PreferenciasEditorEditar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/PreferenciasEditorEditarResponse" message="tns:INotificacionesPorSolicitud_PreferenciasEditorEditar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMensajes_PreferenciasTransaccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/ConsultarMensajes_PreferenciasTransaccion" message="tns:INotificacionesPorSolicitud_ConsultarMensajes_PreferenciasTransaccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/ConsultarMensajes_PreferenciasTransaccionResponse" message="tns:INotificacionesPorSolicitud_ConsultarMensajes_PreferenciasTransaccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPreferencias">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/ConsultarPreferencias" message="tns:INotificacionesPorSolicitud_ConsultarPreferencias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/ConsultarPreferenciasResponse" message="tns:INotificacionesPorSolicitud_ConsultarPreferencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarPreferenciasTyCMx">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/VerificarPreferenciasTyCMx" message="tns:INotificacionesPorSolicitud_VerificarPreferenciasTyCMx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/VerificarPreferenciasTyCMxResponse" message="tns:INotificacionesPorSolicitud_VerificarPreferenciasTyCMx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPreferenciasTyCMx">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/CrearPreferenciasTyCMx" message="tns:INotificacionesPorSolicitud_CrearPreferenciasTyCMx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/CrearPreferenciasTyCMxResponse" message="tns:INotificacionesPorSolicitud_CrearPreferenciasTyCMx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificarTyCMx">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/NotificarTyCMx" message="tns:INotificacionesPorSolicitud_NotificarTyCMx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/NotificarTyCMxResponse" message="tns:INotificacionesPorSolicitud_NotificarTyCMx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MSMQMessage_Mexico">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/MSMQMessage_Mexico" message="tns:INotificacionesPorSolicitud_MSMQMessage_Mexico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/MSMQMessage_MexicoResponse" message="tns:INotificacionesPorSolicitud_MSMQMessage_Mexico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnqueueEmail_Mexico">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/EnqueueEmail_Mexico" message="tns:INotificacionesPorSolicitud_EnqueueEmail_Mexico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotificacionesPorSolicitud/EnqueueEmail_MexicoResponse" message="tns:INotificacionesPorSolicitud_EnqueueEmail_Mexico_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INotificacionesPorSolicitud" type="tns:INotificacionesPorSolicitud">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnqueueMessage">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/EnqueueMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="MSMQMessage">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/MSMQMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePreferenciasPortal">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/UpdatePreferenciasPortal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePreferenciasPipeline">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/UpdatePreferenciasPipeline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnqueueMessageMAIL">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/EnqueueMessageMAIL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="MesaggeQueues">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/MesaggeQueues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Notificacion_SMS_CreacionCuentas">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/Notificacion_SMS_CreacionCuentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="C_E_comunicacion_Automatica_insert">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/C_E_comunicacion_Automatica_insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreferenciasEditor">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/PreferenciasEditor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreferenciasEditorEditar">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/PreferenciasEditorEditar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMensajes_PreferenciasTransaccion">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/ConsultarMensajes_PreferenciasTransaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPreferencias">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/ConsultarPreferencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarPreferenciasTyCMx">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/VerificarPreferenciasTyCMx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPreferenciasTyCMx">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/CrearPreferenciasTyCMx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotificarTyCMx">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/NotificarTyCMx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MSMQMessage_Mexico">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/MSMQMessage_Mexico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnqueueEmail_Mexico">
+      <soap:operation soapAction="http://tempuri.org/INotificacionesPorSolicitud/EnqueueEmail_Mexico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NotificacionesPorSolicitud">
+    <wsdl:port name="BasicHttpBinding_INotificacionesPorSolicitud" binding="tns:BasicHttpBinding_INotificacionesPorSolicitud">
+      <soap:address location="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

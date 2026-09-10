@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OM.Notifications.Facade.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UseProxyForMessages" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UseProxyForEmail" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UseProxyForContacts" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LegacyProxyEndpoint" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://coboap45/OM.Notifications/NotificationsService.svc</Value>
+    </Setting>
+    <Setting Name="StandardProxyEndpoint" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://coboap45/OM.Notifications.Service/service</Value>
+    </Setting>
+    <Setting Name="UseWindowsServiceProxy" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseProxyForMSMQMessage_Mexico" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseProxyForMSMQMessage" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

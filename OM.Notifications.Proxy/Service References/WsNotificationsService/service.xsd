@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OM.Notifications.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OM.Notifications.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfMessageVariable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageVariable" nillable="true" type="tns:MessageVariable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageVariable" nillable="true" type="tns:ArrayOfMessageVariable" />
+  <xs:complexType name="MessageVariable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageVariable" nillable="true" type="tns:MessageVariable" />
+  <xs:complexType name="ArrayOfMessageAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageAttachment" nillable="true" type="tns:MessageAttachment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageAttachment" nillable="true" type="tns:ArrayOfMessageAttachment" />
+  <xs:complexType name="MessageAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EncryptionKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageAttachment" nillable="true" type="tns:MessageAttachment" />
+  <xs:complexType name="ArrayOfMessageContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageContact" nillable="true" type="tns:MessageContact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageContact" nillable="true" type="tns:ArrayOfMessageContact" />
+  <xs:complexType name="MessageContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsOnline" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageBody" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Recipient" type="tns:ContactRecipient" />
+      <xs:element minOccurs="0" name="Type" type="tns:MessageType" />
+      <xs:element minOccurs="0" name="UnifiedReference" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageContact" nillable="true" type="tns:MessageContact" />
+  <xs:simpleType name="ContactRecipient">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Customer" />
+      <xs:enumeration value="Agent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ContactRecipient" nillable="true" type="tns:ContactRecipient" />
+  <xs:simpleType name="MessageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SMS" />
+      <xs:enumeration value="Email" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageType" nillable="true" type="tns:MessageType" />
+</xs:schema>

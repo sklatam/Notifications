@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="OM.Notifications.Facade.NotificationsService" CodeBehind="NotificationsService.svc.cs" %>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DSNotificaciones" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSNotificaciones" Namespace="http://schemas.datacontract.org/2004/07/SkCo.Notificaciones.DSL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSNotificaciones.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSEDITOR" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSEDITOR" Namespace="http://schemas.datacontract.org/2004/07/SkCo.Notificaciones.DSL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSEDITOR.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element ref="xs:schema" />
+        <xs:any />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

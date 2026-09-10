@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cd7fcf4d-fab6-41da-b85c-532ae822b3b1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://app_stg/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DSNotificaciones.xsd" MetadataType="Schema" ID="f8f8a8ec-3ca0-461d-8eb2-63287917d992" SourceId="1" SourceUrl="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd2" />
+    <MetadataFile FileName="NotificacionesPorSolicitud.xsd" MetadataType="Schema" ID="06d8950f-75d0-46d0-a75a-8ffd82a141bf" SourceId="1" SourceUrl="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd1" />
+    <MetadataFile FileName="NotificacionesPorSolicitud.disco" MetadataType="Disco" ID="eccb4342-645b-410c-a50a-8df38fc6ec12" SourceId="1" SourceUrl="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?disco" />
+    <MetadataFile FileName="NotificacionesPorSolicitud1.xsd" MetadataType="Schema" ID="c914a1bf-92f1-440d-ad39-968fa31e6ced" SourceId="1" SourceUrl="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd3" />
+    <MetadataFile FileName="NotificacionesPorSolicitud2.xsd" MetadataType="Schema" ID="fc7f5b82-f6f3-49a4-8091-87390c4d84df" SourceId="1" SourceUrl="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd0" />
+    <MetadataFile FileName="DSEDITOR.xsd" MetadataType="Schema" ID="22860280-4b44-4afe-b5da-96b3afaff103" SourceId="1" SourceUrl="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?xsd=xsd4" />
+    <MetadataFile FileName="NotificacionesPorSolicitud.wsdl" MetadataType="Wsdl" ID="5bdcd3bf-dfcf-414f-9717-03418a8caf57" SourceId="1" SourceUrl="http://cobodb17/SkCo.NotificacionesPorSolicitud.FSL/NotificacionesPorSolicitud.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
