@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5C1D7D8-A425-4795-86E1-57981FD9CCD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OM.Notifications.BLL.Impl</RootNamespace>
+    <AssemblyName>OM.Notifications.BLL.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\OM.Libraries.EnterpriseLibrary.1.0.0\lib\net20\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\OM.Libraries.EnterpriseLibrary.1.0.0\lib\net20\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.10\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="OM.Common.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4aa5575d896fe3bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\OM.Common.Configuration.2.0.1\lib\net20\OM.Common.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="OM.Common.Data, Version=2.5.0.0, Culture=neutral, PublicKeyToken=4aa5575d896fe3bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\OM.Common.Data.2.6.6\lib\net20\OM.Common.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OM.Common.Diagnostics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4aa5575d896fe3bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\OM.Common.Diagnostics.1.1.2\lib\net20\OM.Common.Diagnostics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OM.Common.Diagnostics.BPT, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4aa5575d896fe3bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\OM.Common.Diagnostics.1.1.2\lib\net20\OM.Common.Diagnostics.BPT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OM.Common.Utils.EnumDescription, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4aa5575d896fe3bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\OM.Common.Utils.EnumDescription.1.0.1\lib\net20\OM.Common.Utils.EnumDescription.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders\MessageBuilderFactory.cs" />
+    <Compile Include="Builders\IMessageBuilder.cs" />
+    <Compile Include="Builders\Impl\EmailMessageBuilder.cs" />
+    <Compile Include="Builders\Impl\SmsMessageBuilder.cs" />
+    <Compile Include="Helpers\ContactExtensions.cs" />
+    <Compile Include="Helpers\MessageExtensions.cs" />
+    <Compile Include="Helpers\SecureAttachmentExtensions.cs" />
+    <Compile Include="NotificationsService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OM.Notifications.Bll\OM.Notifications.BLL.csproj">
+      <Project>{3191daa1-1c4c-4d1b-acfb-a7ad159acad9}</Project>
+      <Name>OM.Notifications.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OM.Notifications.Data\OM.Notifications.Data.csproj">
+      <Project>{9e2972c3-0ea0-4ebd-8d46-fec4af901376}</Project>
+      <Name>OM.Notifications.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OM.Notifications.Entities\OM.Notifications.Entities.csproj">
+      <Project>{eabce6aa-785d-4dff-b780-264f83071621}</Project>
+      <Name>OM.Notifications.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OM.Notifications.Processors\OM.Notifications.Processors.csproj">
+      <Project>{9f296b65-7596-4ee4-a902-5bc099192406}</Project>
+      <Name>OM.Notifications.Processors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
