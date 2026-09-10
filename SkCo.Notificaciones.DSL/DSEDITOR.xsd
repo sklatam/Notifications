@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSEDITOR" targetNamespace="http://tempuri.org/DSEDITOR.xsd" xmlns:mstns="http://tempuri.org/DSEDITOR.xsd" xmlns="http://tempuri.org/DSEDITOR.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSEDITOR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSEDITOR" msprop:Generator_DataSetName="DSEDITOR" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Editor" msprop:Generator_UserTableName="Editor" msprop:Generator_RowDeletedName="EditorRowDeleted" msprop:Generator_RowChangedName="EditorRowChanged" msprop:Generator_RowClassName="EditorRow" msprop:Generator_RowChangingName="EditorRowChanging" msprop:Generator_RowEvArgName="EditorRowChangeEvent" msprop:Generator_RowEvHandlerName="EditorRowChangeEventHandler" msprop:Generator_TableClassName="EditorDataTable" msprop:Generator_TableVarName="tableEditor" msprop:Generator_RowDeletingName="EditorRowDeleting" msprop:Generator_TablePropName="Editor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdCategoria" msprop:Generator_UserColumnName="IdCategoria" msprop:Generator_ColumnVarNameInTable="columnIdCategoria" msprop:Generator_ColumnPropNameInRow="IdCategoria" msprop:Generator_ColumnPropNameInTable="IdCategoriaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Descripcion" msprop:Generator_UserColumnName="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SMS" msprop:Generator_UserColumnName="SMS" msprop:Generator_ColumnPropNameInRow="SMS" msprop:Generator_ColumnVarNameInTable="columnSMS" msprop:Generator_ColumnPropNameInTable="SMSColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MAIL" msprop:Generator_UserColumnName="MAIL" msprop:Generator_ColumnPropNameInRow="MAIL" msprop:Generator_ColumnVarNameInTable="columnMAIL" msprop:Generator_ColumnPropNameInTable="MAILColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VisiblePaginaInterna" msprop:Generator_UserColumnName="VisiblePaginaInterna" msprop:Generator_ColumnVarNameInTable="columnVisiblePaginaInterna" msprop:Generator_ColumnPropNameInRow="VisiblePaginaInterna" msprop:Generator_ColumnPropNameInTable="VisiblePaginaInternaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VisiblePaginaPaginacliente" msprop:Generator_UserColumnName="VisiblePaginaPaginacliente" msprop:Generator_ColumnVarNameInTable="columnVisiblePaginaPaginacliente" msprop:Generator_ColumnPropNameInRow="VisiblePaginaPaginacliente" msprop:Generator_ColumnPropNameInTable="VisiblePaginaPaginaclienteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ObligatoriaSeleccionPreferencia" msprop:Generator_UserColumnName="ObligatoriaSeleccionPreferencia" msprop:Generator_ColumnVarNameInTable="columnObligatoriaSeleccionPreferencia" msprop:Generator_ColumnPropNameInRow="ObligatoriaSeleccionPreferencia" msprop:Generator_ColumnPropNameInTable="ObligatoriaSeleccionPreferenciaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Nivel" msprop:Generator_UserColumnName="Nivel" msprop:Generator_ColumnPropNameInRow="Nivel" msprop:Generator_ColumnVarNameInTable="columnNivel" msprop:Generator_ColumnPropNameInTable="NivelColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IdCategoriaNivel" msprop:Generator_UserColumnName="IdCategoriaNivel" msprop:Generator_ColumnPropNameInRow="IdCategoriaNivel" msprop:Generator_ColumnVarNameInTable="columnIdCategoriaNivel" msprop:Generator_ColumnPropNameInTable="IdCategoriaNivelColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

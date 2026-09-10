@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = OM.Notifications.Test
+build_property.ProjectDir = C:\AzureDevOps\Borrar\OM.Notifications\OM.Notifications.Test\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
